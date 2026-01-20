@@ -11,6 +11,7 @@ Infrastructure: AWS EC2, Docker.
 
 **System Architecture**
 graph TD
+
     Client[Client Browser/App] -- Socket.IO --> Gateway[Node.js Gateway Service]
     Gateway -- Events --> RabbitMQ{RabbitMQ Message Broker}
     RabbitMQ -- Dispatch --> MsgService[Message Service]
